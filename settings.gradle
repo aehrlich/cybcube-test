@@ -1,0 +1,4 @@
+rootProject.name = 'cybcube'
+include 'cybcube-common'
+include 'data-collector'
+include 'social-rating-calculator'

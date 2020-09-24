@@ -1,0 +1,29 @@
+buildscript {
+    ext {
+        springBootVersion = '2.3.4.RELEASE'
+    }
+}
+
+plugins {
+    id 'java'
+    id 'idea'
+}
+group = 'ee.aehrlich.cybcube'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    implementation 'jakarta.validation:jakarta.validation-api:2.0.2'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+}
